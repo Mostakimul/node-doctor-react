@@ -20,7 +20,7 @@ const SingleService = ({service}) => {
           <Typography variant="h5" component="div">
             {name}
           </Typography>
-          <Typography variant="body2">
+          <Typography variant="body2" color="text.secondary">
             {description}
           </Typography>
         </CardContent>

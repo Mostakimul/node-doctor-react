@@ -2,6 +2,7 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import {Container} from "@mui/material";
+import Typography from '@mui/material/Typography';
 import SingleService from "../SingleService/SingleService";
 import fluoride from "../../../images/fluoride.png";
 import whitening from "../../../images/whitening.png";
@@ -21,8 +22,14 @@ const Services = () => {
   ]
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1, py: 3 }}>
       <Container>
+        <Typography sx={{color:"info.main"}} variant="h6" component="div">
+          Our Services
+        </Typography>
+        <Typography sx={{fontWeight: "bold"}} variant="h4" component="div">
+          Services We Provide
+        </Typography>
         <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
           {services.map((service) => (
             <SingleService key={service.img} service={service}/>
