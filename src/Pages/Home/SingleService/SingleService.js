@@ -9,7 +9,7 @@ const SingleService = ({service}) => {
   const {name, description, img} = service
   return (
     <Grid item xs={4} sm={4} md={4} >
-      <Card sx={{ minWidth: 275 }}>
+      <Card sx={{ minWidth: 275, boxShadow: 0, my: 5 }}>
         <CardMedia
           component="img"
           alt={name}
