@@ -20,7 +20,7 @@ const AvailableAppointment = ({ date }) => {
       <Container>
         <Grid container spacing={2}>
           {appData.map((data) => (
-            <Booking key={data.id} data={data}></Booking>
+            <Booking key={data.id} data={data} date={date}></Booking>
           ))}
         </Grid>
       </Container>
