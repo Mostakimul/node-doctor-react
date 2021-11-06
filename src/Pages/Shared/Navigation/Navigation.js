@@ -37,6 +37,12 @@ const Navigation = () => {
           >
             <Button color="inherit">Login</Button>
           </NavLink>
+          <NavLink
+            to="/register"
+            style={{ textDecoration: 'none', color: '#fff' }}
+          >
+            <Button color="inherit">Register</Button>
+          </NavLink>
         </Toolbar>
       </AppBar>
     </Box>

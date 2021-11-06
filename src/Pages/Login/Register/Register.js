@@ -11,14 +11,14 @@ import { useForm } from 'react-hook-form';
 import { NavLink } from 'react-router-dom';
 import login from '../../../images/login.png';
 
-const Login = () => {
+const Register = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
-  const [loginData, setLoginData] = useState({});
+  const [registerData, setRegisterData] = useState({});
 
   const onSubmit = (data) => {
     console.log(data);
@@ -38,20 +38,20 @@ const Login = () => {
         >
           <Grid item xs={12} md={6}>
             <Typography variant="h6" gutterBottom>
-              Login
+              Register
             </Typography>
             {/* form */}
             <form onSubmit={handleSubmit(onSubmit)}>
               <TextField
-                {...register('userName')}
+                {...register('email')}
                 fullWidth
-                label="User Name"
-                type="text"
+                label="Your Email"
+                type="email"
                 variant="outlined"
                 size="small"
                 margin="normal"
               />
-              {errors.userName && <span>This field is required</span>}
+              {errors.email && <span>This field is required</span>}
 
               <TextField
                 {...register('password')}
@@ -64,18 +64,29 @@ const Login = () => {
               />
               {errors.password && <span>This field is required</span>}
 
+              <TextField
+                {...register('password2')}
+                fullWidth
+                label="Confirm Password"
+                type="password"
+                variant="outlined"
+                size="small"
+                margin="normal"
+              />
+              {errors.password2 && <span>This field is required</span>}
+
               <Button
                 fullWidth
                 type="submit"
                 variant="contained"
                 sx={{ my: 2 }}
               >
-                login
+                Register
               </Button>
             </form>
 
-            <NavLink to="/register" style={{ textDecoration: 0 }}>
-              <Button variant="text">New User? Please Register</Button>
+            <NavLink to="/login" style={{ textDecoration: 0 }}>
+              <Button variant="text">Already Registered? Please Login</Button>
             </NavLink>
           </Grid>
           <Grid item xs={12} md={6}>
@@ -87,4 +98,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;
